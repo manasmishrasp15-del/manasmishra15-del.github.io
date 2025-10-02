@@ -1,55 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Artisan Details</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #fdfcfb, #e2d1c3);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr.Ramesh Kumar (Artisan)</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #FFF8DC; /* Light banana color */
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 3em;
+            color: #6B4226; /* earthy tone */
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            padding: 50px 20px;
+        }
+
+        /* Card Styles */
+        .card {
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            width: 350px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .card img {
+            width: 100%;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-content h2 {
+            margin: 0 0 10px 0;
+            color: #A0522D; /* deep earthy color */
+        }
+
+        .card-content p {
+            margin: 5px 0;
+            line-height: 1.5;
+        }
+
+        .story {
+            font-style: italic;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        /* Button */
+        .buy-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 12px 0;
+            margin-top: 15px;
+            background-color: #FFB347; /* light orange */
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s;
+            text-decoration: none;
+        }
+
+        .buy-btn:hover {
+            background-color: #FF8C42;
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                padding: 20px;
+            }
+        }
+        @keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
     }
-    .card {
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
-      padding: 25px;
-      width: 90%;
-      max-width: 450px;
-      text-align: center;
-      animation: fadeIn 1.5s ease;
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
-    .card h1 {
-      color: #333;
-      margin-bottom: 10px;
-    }
-    .card h2 {
-      color: #555;
-      font-size: 1.2em;
-      margin-bottom: 15px;
-    }
-    .card p {
-      font-size: 1em;
-      color: #444;
-      margin: 8px 0;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+}
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    animation: slideUp 1s ease-out;
+}
+/* Gallery Styles */
+/* Gallery Styles */
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 20px 60px 20px;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    width: 200px;        /* uniform box width */
+    height: 200px;       /* uniform box height */
+    overflow: hidden;    /* hide overflowing parts of image */
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* ensures the image fills the box */
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+
+    </style>
 </head>
 <body>
-  <div class="card">
-    <h1>🌟 Ramesh Kumar 🌟</h1>
-    <h2>Banarasi Saree Artisan</h2>
-    <p><strong>Place:</strong> Varanasi, UP</p>
-    <p><strong>Story:</strong> Third-generation weaver preserving the rich tradition of Banarasi weaving.</p>
-  </div>
+    <h1>-: Artisan Profile :-</h1>
+    <div class="container">
+        <!-- Artisan Card -->
+        <div class="card">
+            
+            <div class="card-content">
+                <h2>✨Ramesh Kumar✨</h2>
+                <style>
+                    h2{text-align: center;}
+                </style>
+                <p><strong>Age:</strong> 39 Years</p>
+                <p><strong>Place of Origin:</strong> Varanasi, Uttar Pradesh</p>
+                <p><strong>Product Mastery:</strong> Handwoven Silk (Benarsi) Sarees</p>
+                <p class="story">"Experience the timeless elegance of Varanasi’s handwoven silk, where every thread tells the story of centuries-old Indian craftsmanship. Rich in vibrant hues and traditional motifs, this saree embodies the soul of our heritage, bringing home the artistry, culture, and regal charm of India. Own a piece of tradition, and let every occasion shine with authentic ethnic grace.".</p>
+                
+            </div>
+        </div>
+    </div>
+    <!-- Gallery Section -->
+<h2 style="text-align:center; margin-top:50px; color:#6B4226;">Ramesh Kumar's Craft & Workshop</h2>
+
+<div class="gallery-container">
+    <div class="gallery-item">
+        <img src="oooo.jpg" alt="Banarasi Saree 1">
+    </div>
+    <div class="gallery-item">
+        <img src="Beanaras.jpg" alt="Banarasi Saree 2">
+    </div>
+    <div class="gallery-item">
+        <img src="Handloom.jpg" alt="Workshop">
+    </div>
+</div>
+
 </body>
 </html>
+
+
